@@ -10,12 +10,13 @@ public class Selenium2Example  {
         // Create a new instance of the Firefox driver
         // Notice that the remainder of the code relies on the interface, 
         // not the implementation.
-        System.setProperty("webdriver.gecko.driver","F:\\geckodriver.exe");
+
+        System.setProperty("webdriver.firefox.marionette","F:\\LeapFrog\\geckodriver.exe");
 
         WebDriver driver = new FirefoxDriver();
 
         // And now use this to visit Google
-        driver.get("http://localhost:81/wordpress/wp-admin");
+        driver.get("http://localhost/wordpress/wp-admin");
         // Alternatively the same thing can be done like this
         // driver.navigate().to("http://www.google.com");
 
@@ -35,20 +36,7 @@ public class Selenium2Example  {
 
         element3.submit();
 
-        // Check the title of the page
-        System.out.println("Page title is: " + driver.getTitle());
+        driver.quit();
 
-        // Google's search is rendered dynamically with JavaScript.
-        // Wait for the page to load, timeout after 10 seconds
-        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver d) {
-                return d.getTitle().toLowerCase().startsWith("cheese!");
-            }
-        });
-
-        // Should see: "cheese! - Google Search"
-        System.out.println("Page title is: " + driver.getTitle());
-
-        //Close the browser
     }
 }
