@@ -19,16 +19,16 @@ public class Dashboard {
         this.driver = driver;
     }
 
-    public gotoAddNewUser() {
+    public void gotoAddNewUser() {
        homeLink.click();
 
     }
 
-    public gotoAddNewPost() {
+    public void gotoAddNewPost() {
         addNewPostLink.click();
     }
 
-    public gotoAddNewPage(){
+    public void gotoAddNewPage(){
        addNewPageLink.click();
     }
 }

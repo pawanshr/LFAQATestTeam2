@@ -29,7 +29,10 @@ public class AddNewPost {
 
     }
 
-    public  doAddNewPost() {
+
+    public void doAddNewPost() {
+
+
 
       title.sendKeys("chandagiri is beautiful");
       paragraph.sendKeys("chandagiri is located in thankot .you can view changagiri hills by cable car");
