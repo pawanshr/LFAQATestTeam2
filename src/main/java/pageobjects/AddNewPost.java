@@ -34,7 +34,7 @@ public class AddNewPost {
 
 
 
-      title.sendKeys("chandagiri is beautiful");
+      title.sendKeys("chandagiri is beautiful and fun");
       paragraph.sendKeys("chandagiri is located in thankot .you can view changagiri hills by cable car");
       publish.click();
 
