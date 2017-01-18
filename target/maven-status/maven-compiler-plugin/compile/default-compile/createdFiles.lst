@@ -1,0 +1,4 @@
+TestExecutor.class
+pageobjects\Login.class
+pageobjects\AddNewUser.class
+pageobjects\AddNewPage.class
