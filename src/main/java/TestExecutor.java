@@ -53,7 +53,7 @@ public class TestExecutor {
         addNewPost.doAddNewPost();
 
         AddNewPage addNewPage=new AddNewPage(driver);
-        addNewPage.doaddpage();
+        //addNewPage.doaddpage();
         addNewPage.dopublishpage();
         addNewPage.doAddtitle();
         addNewPage.addpagecontent();
