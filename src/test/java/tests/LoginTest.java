@@ -23,11 +23,24 @@ public class LoginTest {
         WebDriver driver=new FirefoxDriver();
         driver.get("http://localhost/wordpress/wp-admin");
 
+
         Login login = new Login(driver);
         PageFactory.initElements(driver,login);
         login.setUsername();
         login.setPassword();
         login.setLogin();
 
+    }
+    @Test
+
+    public void testThatLoginDosentWork(){
+        System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
+        WebDriver driver=new FirefoxDriver();
+        driver.get("http://localhost/wordpress/wp-admin");
+        Login login=new Login(driver);
+        PageFactory.initElements(driver,login);
+        login.setUsername();
+        login.setPassword();
+        login.setLogin();
     }
 }
