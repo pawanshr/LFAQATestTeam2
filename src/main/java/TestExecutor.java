@@ -1,6 +1,10 @@
 import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import pageobjects.AddNewPage;
+import pageobjects.AddNewPost;
+import pageobjects.Dashboard;
 import pageobjects.Login;
 
 /**
@@ -14,9 +18,25 @@ public class TestExecutor {
         driver.get("http://localhost/wordpress/wp-admin");
 
         Login login = new Login(driver);
+        PageFactory.initElements(driver,login);
         login.setUsername();
         login.setPassword();
         login.setLogin();
+
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoAddNewPost();
+        dashboard.gotoAddNewPage();
+        dashboard.gotoAddNewUser();
+
+        AddNewPost addNewPost=new AddNewPost(driver);
+        addNewPost.doAddNewPost();
+
+        AddNewPage addNewPage=new AddNewPage(driver);
+        addNewPage.doaddpage();
+        addNewPage.dopublishpage();
+        addNewPage.doAddtitle();
+        addNewPage.addpagecontent();
+        addNewPage.seepreview();
 
 
 

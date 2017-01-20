@@ -4,37 +4,37 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by Ujjwal on 1/18/2017.
  */
 public class Login {
-     WebDriver driver;
+    WebDriver driver;
 
-    By username=By.id("user_login");
-    By password=By.id("user_pass");
-    By login=By.id("wp-submit");
+    @FindBy(id = "user_login")
+    WebElement username;
 
+    @FindBy(id = "user_pass")
+    WebElement password;
 
-   public Login(WebDriver driver){
+    @FindBy(id = "wp-submit")
+    WebElement login;
 
-       this.driver=driver;
-
-   }
-
+    public Login(WebDriver driver) {
+        this.driver = driver;
+    }
     //set username in username field
-
-    public  void setUsername(){
-        driver.findElement(username).sendKeys("admin");
+    public void setUsername() {
+        username.sendKeys("admin");
     }
     //set password in password field
-    public void setPassword(){
-        driver.findElement(password).sendKeys("admin");
+    public void setPassword() {
+        password.sendKeys("admin");
     }
-
     //click the submit button
-    public void setLogin(){
-        driver.findElement(login).click();
+    public void setLogin() {
+        login.click();
     }
 
 }
