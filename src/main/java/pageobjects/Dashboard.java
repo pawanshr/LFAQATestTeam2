@@ -15,7 +15,7 @@ public class Dashboard {
     WebElement homeLink;
 
     @FindBy(xpath=".//*[@id='menu-posts']/a/div[3]")
-    WebElement Posts;
+    WebElement posts;
 
     @FindBy(xpath=".//*[@id='menu-posts']/ul/li[3]/a")
     WebElement addNewPostLink;
@@ -26,16 +26,18 @@ public class Dashboard {
     @FindBy(xpath=".//*[@id='menu-users']/ul/li[3]/a")
     WebElement addNewUserLink;
 
-    public Dashboard(WebDriver driver){
+    public Dashboard(WebDriver driver) {
         this.driver = driver;
     }
 
     public void gotohomeLink() {
         homeLink.click();
     }
+
     public void gotoPosts() {
-        Posts.click();
+        posts.click();
     }
+
     public void gotoAddNewPost() {
         addNewPostLink.click();
     }
@@ -44,9 +46,9 @@ public class Dashboard {
        addNewUserLink.click();
     }
 
-
-
-    public void gotoAddNewPage(){
-       addNewPageLink.click();
+    public void gotoAddNewPage() {
+        addNewPageLink.click();
     }
 }
+
+
