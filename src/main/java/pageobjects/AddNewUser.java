@@ -25,7 +25,7 @@ public class AddNewUser {
     @FindBy(id = "url")
     WebElement url;
     @FindBy(id = "pass1-text")
-    WebElement pass1-text;
+    WebElement pass1text;
     @FindBy(id = "send_user_notification")
     WebElement send_user_notification;
     @FindBy(id = "role")
@@ -51,7 +51,7 @@ public class AddNewUser {
         url.sendKeys("www.rajnish.com.np");
     }
     public  void setPassword(){
-        pass1-text.sendKeys("admin");
+        pass1text.sendKeys("admin");
     }
     public  void setSendusernotification(){
         send_user_notification.click();

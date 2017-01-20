@@ -1,14 +1,11 @@
 import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-<<<<<<< HEAD
 import pageobjects.AddNewUser;
-=======
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.AddNewPage;
 import pageobjects.AddNewPost;
 import pageobjects.Dashboard;
->>>>>>> b7d31e77501b4d98a51862be82cd76e6f0f97be4
 import pageobjects.Login;
 
 /**
@@ -27,12 +24,20 @@ public class TestExecutor {
         login.setPassword();
         login.setLogin();
 
-<<<<<<< HEAD
+
         //for AddNewUser page
         AddNewUser addnewuser = new AddNewUser(driver);
+        PageFactory.initElements(driver,addnewuser);
         addnewuser.setUsername();
         addnewuser.setEmail();
-=======
+        addnewuser.setFirstname();
+        addnewuser.setlastname();
+        addnewuser.setPassword();
+        addnewuser.setwebsite();
+        addnewuser.setSendusernotification();
+        addnewuser.setRole();
+        addnewuser.setSubmitbutton();
+
         Dashboard dashboard=new Dashboard(driver);
         dashboard.gotoAddNewPost();
         dashboard.gotoAddNewPage();
