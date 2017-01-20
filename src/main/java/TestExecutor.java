@@ -24,6 +24,11 @@ public class TestExecutor {
         login.setPassword();
         login.setLogin();
 
+        Dashboard dashboard=new Dashboard(driver);
+        PageFactory.initElements(driver,dashboard);
+
+        dashboard.gotoPosts();
+        dashboard.gotoAddNewPost();
 
         //for AddNewUser page
         AddNewUser addnewuser = new AddNewUser(driver);
@@ -38,11 +43,7 @@ public class TestExecutor {
         addnewuser.setRole();
         addnewuser.setSubmitbutton();
 
-        Dashboard dashboard=new Dashboard(driver);
-        PageFactory.initElements(driver,dashboard);
 
-        dashboard.gotoPosts();
-        dashboard.gotoAddNewPost();
 
         AddNewPost addNewPost=new AddNewPost(driver);
         addNewPost.doAddNewPost();
