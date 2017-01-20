@@ -1,6 +1,7 @@
 import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import pageobjects.AddNewUser;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.AddNewPage;
 import pageobjects.AddNewPost;
@@ -23,6 +24,20 @@ public class TestExecutor {
         login.setPassword();
         login.setLogin();
 
+
+        //for AddNewUser page
+        AddNewUser addnewuser = new AddNewUser(driver);
+        PageFactory.initElements(driver,addnewuser);
+        addnewuser.setUsername();
+        addnewuser.setEmail();
+        addnewuser.setFirstname();
+        addnewuser.setlastname();
+        addnewuser.setPassword();
+        addnewuser.setwebsite();
+        addnewuser.setSendusernotification();
+        addnewuser.setRole();
+        addnewuser.setSubmitbutton();
+
         Dashboard dashboard=new Dashboard(driver);
         PageFactory.initElements(driver,dashboard);
 
@@ -38,5 +53,11 @@ public class TestExecutor {
         addNewPage.doAddtitle();
         addNewPage.addpagecontent();
         addNewPage.seepreview();
+
+
+
+
+
+
     }
 }
