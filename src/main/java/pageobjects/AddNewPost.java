@@ -21,7 +21,6 @@ public class AddNewPost {
     @FindBy(id = "publish")
     WebElement publish;
 
-
     public AddNewPost(WebDriver driver) {
         this.driver = driver;
     }
