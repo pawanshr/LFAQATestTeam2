@@ -1,6 +1,7 @@
 import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import pageobjects.AddNewUser;
 import pageobjects.Login;
 
 /**
@@ -17,6 +18,11 @@ public class TestExecutor {
         login.setUsername();
         login.setPassword();
         login.setLogin();
+
+        //for AddNewUser page
+        AddNewUser addnewuser = new AddNewUser(driver);
+        addnewuser.setUsername();
+        addnewuser.setEmail();
 
 
 

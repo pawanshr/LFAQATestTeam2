@@ -44,7 +44,7 @@ public class AddNewUser {
 
     }
     public  void setwebsite(){
-        driver.findElement(website).sendKeys("www.google.com");
+        driver.findElement(website).sendKeys("www.rajnish.com.np");
 
     }
     public  void setPassword(){
