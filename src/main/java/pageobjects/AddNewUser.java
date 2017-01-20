@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.FindBy;
 
 import java.sql.Driver;
 
@@ -12,56 +13,54 @@ import java.sql.Driver;
  */
 public class AddNewUser {
     WebDriver driver;
-    By username = By.id("user_login");
-    By Email = By.id("email");
-    By firstname = By.id("first_name");
-    By lastname = By.id("last_name");
-    By website = By.id("url");
-    By password = By.id("pass1-text");
-    By sendusernotification = By.id("send_user_notification");
-    By role = By.id("role");
-    By submitbutton = By.id("createusersub");
 
+    @FindBy(id = "user_login")
+    WebElement username;
+    @FindBy(id = "Email")
+    WebElement Email;
+    @FindBy(id = "first_name")
+    WebElement firstname;
+    @FindBy(id = "last_name")
+    WebElement lastname;
+    @FindBy(id = "url")
+    WebElement url;
+    @FindBy(id = "pass1-text")
+    WebElement pass1-text;
+    @FindBy(id = "send_user_notification")
+    WebElement send_user_notification;
+    @FindBy(id = "role")
+    WebElement role;
+    @FindBy(id = "createusersub")
+    WebElement createusersub;
     public AddNewUser(WebDriver driver) {
         this.driver = driver;
     }
-
     public void setUsername() {
-        driver.findElement(username).sendKeys("admin");
-
+        username.sendKeys("admin");
     }
-
     public void setEmail() {
-        driver.findElement(Email).sendKeys("");
+        Email.sendKeys("");
     }
-
     public void setFirstname() {
-        driver.findElement(firstname).sendKeys("Rajnish");
-
+        firstname.sendKeys("Rajnish");
     }
     public void setlastname(){
-        driver.findElement(lastname).sendKeys("Pradhan");
-
+        lastname.sendKeys("Pradhan");
     }
     public  void setwebsite(){
-        driver.findElement(website).sendKeys("www.rajnish.com.np");
-
+        url.sendKeys("www.rajnish.com.np");
     }
     public  void setPassword(){
-        driver.findElement(password).sendKeys("admin");
-
+        pass1-text.sendKeys("admin");
     }
     public  void setSendusernotification(){
-        driver.findElement(sendusernotification).click();
-
+        send_user_notification.click();
     }
     public  void setRole(){
-        driver.findElement(role).sendKeys("adminstrator");
-
+        role.sendKeys("adminstrator");
     }
     public  void setSubmitbutton(){
-        driver.findElement(submitbutton).click();
-
+        createusersub.click();
     }
 
 }

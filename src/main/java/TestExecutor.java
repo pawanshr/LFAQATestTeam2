@@ -1,7 +1,14 @@
 import org.apache.bcel.generic.NEW;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+<<<<<<< HEAD
 import pageobjects.AddNewUser;
+=======
+import org.openqa.selenium.support.PageFactory;
+import pageobjects.AddNewPage;
+import pageobjects.AddNewPost;
+import pageobjects.Dashboard;
+>>>>>>> b7d31e77501b4d98a51862be82cd76e6f0f97be4
 import pageobjects.Login;
 
 /**
@@ -10,19 +17,37 @@ import pageobjects.Login;
 public class TestExecutor {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.firefox.marionette","E:\\LeapFrog\\geckodriver.exe");
+        System.setProperty("webdriver.firefox.marionette","C:\\LeapFrog\\geckodriver.exe");
         WebDriver driver=new FirefoxDriver();
         driver.get("http://localhost/wordpress/wp-admin");
 
         Login login = new Login(driver);
+        PageFactory.initElements(driver,login);
         login.setUsername();
         login.setPassword();
         login.setLogin();
 
+<<<<<<< HEAD
         //for AddNewUser page
         AddNewUser addnewuser = new AddNewUser(driver);
         addnewuser.setUsername();
         addnewuser.setEmail();
+=======
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoAddNewPost();
+        dashboard.gotoAddNewPage();
+        dashboard.gotoAddNewUser();
+
+        AddNewPost addNewPost=new AddNewPost(driver);
+        addNewPost.doAddNewPost();
+
+        AddNewPage addNewPage=new AddNewPage(driver);
+        addNewPage.doaddpage();
+        addNewPage.dopublishpage();
+        addNewPage.doAddtitle();
+        addNewPage.addpagecontent();
+        addNewPage.seepreview();
+
 
 
 
