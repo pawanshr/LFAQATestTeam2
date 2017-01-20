@@ -20,7 +20,7 @@ public class Dashboard {
     }
 
     public void gotoAddNewUser() {
-       homeLink.click();
+       addNewUserLink.click();
 
     }
 
