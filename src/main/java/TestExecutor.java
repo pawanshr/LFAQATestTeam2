@@ -9,7 +9,9 @@ import pageobjects.Login;
 public class TestExecutor {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.firefox.marionette","c:\\LeapFrog\\geckodriver.exe");
+
+        System.setProperty("webdriver.firefox.marionette","C:\\LeapFrog\\geckodriver.exe");
+
         WebDriver driver=new FirefoxDriver();
         driver.get("http://localhost/wordpress/wp-admin");
 
