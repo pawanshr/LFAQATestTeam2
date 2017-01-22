@@ -29,7 +29,7 @@ public class Login {
     //set username in username field
 
     public  void setUsername(){
-        username.sendKeys("admin");
+        username.sendKeys("admin1");
     }
     //set password in password field
     public void setPassword(){
