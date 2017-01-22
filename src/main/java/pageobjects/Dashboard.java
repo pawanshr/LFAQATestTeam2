@@ -20,8 +20,14 @@ public class Dashboard {
     @FindBy(xpath=".//*[@id='menu-posts']/ul/li[3]/a")
     WebElement addNewPostLink;
 
+    @FindBy(xpath=".//*[@id='menu-pages']/a/div[3]")
+    WebElement pages;
+
     @FindBy(xpath=".//*[@id='menu-pages']/ul/li[3]/a")
     WebElement addNewPageLink;
+
+    @FindBy(xpath=".//*[@id='menu-users']/a/div[3]")
+    WebElement users;
 
     @FindBy(xpath=".//*[@id='menu-users']/ul/li[3]/a")
     WebElement addNewUserLink;
@@ -42,13 +48,22 @@ public class Dashboard {
         addNewPostLink.click();
     }
 
+    public void gotoPages(){
+        pages.click();
+    }
+
+    public void gotoAddNewPage(){
+        addNewPageLink.click();
+    }
+
+    public void gotoUsers(){
+        users.click();
+    }
+
     public void gotoAddNewUser() {
        addNewUserLink.click();
     }
 
-    public void gotoAddNewPage() {
-        addNewPageLink.click();
-    }
 }
 
 
