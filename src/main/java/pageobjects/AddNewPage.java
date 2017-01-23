@@ -28,10 +28,10 @@ public class AddNewPage {
         this.driver = driver;
     }
 
-    public void doAddtitle() { addtitle.sendKeys("QA Class"); }
+    public void doAddtitle(String addtitletext) { addtitle.sendKeys(addtitletext); }
 
-    public void addpagecontent(){
-        pagecontent.sendKeys("A B C D X Y Z");
+    public void addpagecontent(String addpagecontenttext){
+        pagecontent.sendKeys(addpagecontenttext);
     }
 
     public void dopublishpage(){
