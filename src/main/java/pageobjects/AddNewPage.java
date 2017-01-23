@@ -1,16 +1,12 @@
 package pageobjects;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 /**
  * Created by thapa on 1/18/2017.
  */
 public class AddNewPage {
-
     WebDriver driver;
     @FindBy (id = "title")
     WebElement addtitle;
@@ -25,14 +21,11 @@ public class AddNewPage {
     @FindBy(id = "tinymce")
     WebElement body;
 
-
-
-
     public AddNewPage(WebDriver driver){
         this.driver = driver;
     }
-
-    public void doAddtitle(String addtitletext) { addtitle.sendKeys(addtitletext); }
+    public void doAddtitle(String addtitletext) {
+        addtitle.sendKeys(addtitletext); }
 
     public void addpagecontent(String addpagecontenttext){
 
