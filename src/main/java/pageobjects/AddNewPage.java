@@ -20,6 +20,10 @@ public class AddNewPage {
     WebElement publishpage;
     @FindBy (id = "post-preview")
     WebElement preview;
+    @FindBy(id = "content_ifr")
+    WebElement frame;
+    @FindBy(id = "tinymce")
+    WebElement body;
 
 
 
@@ -31,7 +35,11 @@ public class AddNewPage {
     public void doAddtitle(String addtitletext) { addtitle.sendKeys(addtitletext); }
 
     public void addpagecontent(String addpagecontenttext){
-        pagecontent.sendKeys(addpagecontenttext);
+
+        driver.switchTo().frame(frame);
+        body.sendKeys(addpagecontenttext);
+
+
     }
 
     public void dopublishpage(){
