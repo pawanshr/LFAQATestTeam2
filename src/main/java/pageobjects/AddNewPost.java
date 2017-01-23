@@ -24,9 +24,9 @@ public class AddNewPost {
     public AddNewPost(WebDriver driver) {
         this.driver = driver;
     }
-    public void doAddNewPost() {
-        title.sendKeys("chandagiri is beautiful and fun");
-        paragraph.sendKeys("chandagiri is located in thankot .you can view changagiri hills by cable car");
+    public void doAddNewPost( ) {
+        title.sendKeys();
+        paragraph.sendKeys();
         publish.click();
     }
 }
