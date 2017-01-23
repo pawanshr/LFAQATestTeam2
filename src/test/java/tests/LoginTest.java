@@ -22,10 +22,12 @@ public class LoginTest {
         driver.get("http://localhost/wordpress/wp-admin");
         Login login = new Login(driver);
         PageFactory.initElements(driver,login);
-        login.setUsername();
-        login.setPassword();
+
+        login.setUsername("admin");
+        login.setPassword("admin");
         login.setLogin();
     }
+
     @Test
     public void testThatLoginDosentWork(){
         System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
@@ -33,8 +35,9 @@ public class LoginTest {
         driver.get("http://localhost/wordpress/wp-admin");
         Login login=new Login(driver);
         PageFactory.initElements(driver,login);
-        login.setUsername();
-        login.setPassword();
+
+        login.setUsername("admin1");
+        login.setPassword("admin");
         login.setLogin();
     }
 }

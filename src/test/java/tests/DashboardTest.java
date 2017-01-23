@@ -19,8 +19,8 @@ public class DashboardTest {
 
         Login login = new Login(driver);
         PageFactory.initElements(driver,login);
-        login.setUsername();
-        login.setPassword();
+        login.setUsername("admin");
+        login.setPassword("admin");
         login.setLogin();
 
         pageobjects.Dashboard dashboard = new pageobjects.Dashboard(driver);
