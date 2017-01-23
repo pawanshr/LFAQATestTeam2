@@ -13,22 +13,7 @@ import java.sql.Driver;
 /**
  * Created by superuser on 1/22/2017.
  */
-public class DashboardTest {
-
-    Login login;
-    WebDriver driver;
-
-
-    @Before
-    public void setup(){
-        System.setProperty("webdriver.firefox.marionette","C:\\LeapFrog\\geckodriver.exe");
-        WebDriver driver=new FirefoxDriver();
-        driver.get("http://localhost/wordpress/wp-admin");
-
-        login = new Login(driver);
-        PageFactory.initElements(driver,login);
-    }
-
+public class DashboardTest extends BaseTest {
     @Test
     public void testThatDashboardLinkWorks(){
 
@@ -40,23 +25,7 @@ public class DashboardTest {
         PageFactory.initElements(driver,dashboard);
         dashboard.gotohomeLink();
 
-        pageobjects.AddNewPost addNewPost = new pageobjects.AddNewPost(driver);
-        PageFactory.initElements(driver,addNewPost);
-        dashboard.gotoPosts();
-        dashboard.gotoAddNewPost();
 
-        pageobjects.AddNewPage addNewPage = new pageobjects.AddNewPage(driver);
-        PageFactory.initElements(driver,addNewPage);
-        dashboard.gotoPages();
-        dashboard.gotoAddNewPage();
+    }
 
-        pageobjects.AddNewUser addNewUser = new pageobjects.AddNewUser(driver);
-        PageFactory.initElements(driver,addNewUser);
-        dashboard.gotoUsers();
-        dashboard.gotoAddNewUser();
-    }
-    @After
-    public void teardown(){
-        driver.quit();
-    }
 }

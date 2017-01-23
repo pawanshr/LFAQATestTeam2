@@ -18,41 +18,19 @@ import java.sql.Driver;
 /**
  * Created by Ujjwal on 1/18/2017.
  */
-public class LoginTest {
-
-    Login login;
-    WebDriver driver;
-
-    @Before
-    public void setup(){
-        System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
-        driver=new FirefoxDriver();
-        driver.get("http://localhost/wordpress/wp-admin");
-        login=new Login(driver);
-        PageFactory.initElements(driver,login);
-
-
-    }
-
+public class LoginTest extends BaseTest{
     @Test
     public void testThatLoginWorks() {
-
         login.setUsername("admin");
         login.setPassword("admin");
         login.setLogin();
     }
-
     @Test
     public void testThatLoginDosentWork(){
-
-
         login.setUsername("admin1");
         login.setPassword("admin");
         login.setLogin();
 
     }
-    @After
-    public void teardown(){
-        driver.quit();
-    }
+
 }
