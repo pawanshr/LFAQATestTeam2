@@ -28,17 +28,17 @@ public class Login {
 
     //set username in username field
 
-    public  void setUsername(){
-        username.sendKeys("admin1");
+    public  void setUsername(String usernametext){
+        username.sendKeys(usernametext);
     }
     //set password in password field
-    public void setPassword(){
-        password.sendKeys("admin");
+    public void setPassword(String passwordtext){
+        password.sendKeys(passwordtext);
     }
 
     //click the submit button
     public void setLogin(){
-       login.click();
+        login.click();
     }
 
 }

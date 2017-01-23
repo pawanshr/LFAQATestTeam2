@@ -24,8 +24,8 @@ public class TestExecutor {
 
         Login login = new Login(driver);
         PageFactory.initElements(driver,login);
-        login.setUsername();
-        login.setPassword();
+        login.setUsername("admin");
+        login.setPassword("admin");
         login.setLogin();
 
         Dashboard dashboard=new Dashboard(driver);
