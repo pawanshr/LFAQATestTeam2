@@ -25,6 +25,19 @@ public class NewPostTest {
         login.setLogin();
 
 
+        pageobjects.Dashboard dashboard = new pageobjects.Dashboard(driver);
+        PageFactory.initElements(driver,dashboard);
+        dashboard.gotohomeLink();
+
+        pageobjects.AddNewPost addNewPost = new pageobjects.AddNewPost(driver);
+        PageFactory.initElements(driver,addNewPost);
+        dashboard.gotoPosts();
+        dashboard.gotoAddNewPost();
+
+
+
+
+
 
 
 
