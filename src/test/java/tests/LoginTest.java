@@ -1,6 +1,8 @@
 package tests;
 
 import org.apache.bcel.generic.NEW;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,17 +13,29 @@ import pageobjects.AddNewPost;
 import pageobjects.Dashboard;
 import pageobjects.Login;
 
+import java.sql.Driver;
+
 /**
  * Created by Ujjwal on 1/18/2017.
  */
 public class LoginTest {
-    @Test
-    public void testThatLoginWorks(){
-        System.setProperty("webdriver.firefox.marionette","C:\\LeapFrog\\geckodriver.exe");
-        WebDriver driver=new FirefoxDriver();
+
+    Login login;
+    WebDriver driver;
+
+    @Before
+    public void setup(){
+        System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
+        driver=new FirefoxDriver();
         driver.get("http://localhost/wordpress/wp-admin");
-        Login login = new Login(driver);
+        login=new Login(driver);
         PageFactory.initElements(driver,login);
+
+
+    }
+
+    @Test
+    public void testThatLoginWorks() {
 
         login.setUsername("admin");
         login.setPassword("admin");
@@ -30,14 +44,15 @@ public class LoginTest {
 
     @Test
     public void testThatLoginDosentWork(){
-        System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
-        WebDriver driver=new FirefoxDriver();
-        driver.get("http://localhost/wordpress/wp-admin");
-        Login login=new Login(driver);
-        PageFactory.initElements(driver,login);
+
 
         login.setUsername("admin1");
         login.setPassword("admin");
         login.setLogin();
+
+    }
+    @After
+    public void teardown(){
+        driver.quit();
     }
 }
