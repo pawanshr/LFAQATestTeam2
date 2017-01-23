@@ -1,24 +1,37 @@
 package tests;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.Login;
 
+import java.sql.Driver;
+
 /**
  * Created by superuser on 1/22/2017.
  */
 public class DashboardTest {
 
-    @Test
-    public void testThatDashboardLinkWorks(){
+    Login login;
+    WebDriver driver;
+
+
+    @Before
+    public void setup(){
         System.setProperty("webdriver.firefox.marionette","C:\\LeapFrog\\geckodriver.exe");
         WebDriver driver=new FirefoxDriver();
         driver.get("http://localhost/wordpress/wp-admin");
 
-        Login login = new Login(driver);
+        login = new Login(driver);
         PageFactory.initElements(driver,login);
+    }
+
+    @Test
+    public void testThatDashboardLinkWorks(){
+
         login.setUsername("admin");
         login.setPassword("admin");
         login.setLogin();
@@ -41,5 +54,9 @@ public class DashboardTest {
         PageFactory.initElements(driver,addNewUser);
         dashboard.gotoUsers();
         dashboard.gotoAddNewUser();
+    }
+    @After
+    public void teardown(){
+        driver.quit();
     }
 }
