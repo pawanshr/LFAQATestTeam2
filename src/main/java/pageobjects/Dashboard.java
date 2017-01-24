@@ -52,7 +52,7 @@ public class Dashboard {
         pages.click();
     }
 
-    public void gotoAddNewPage(){
+    public void gotoAddNewPages(){
         addNewPageLink.click();
     }
 
