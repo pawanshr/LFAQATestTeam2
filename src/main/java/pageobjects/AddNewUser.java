@@ -16,8 +16,8 @@ public class AddNewUser {
 
     @FindBy(id = "user_login")
     WebElement username;
-    @FindBy(id = "Email")
-    WebElement Email;
+    @FindBy(id = "email")
+    WebElement email;
     @FindBy(id = "first_name")
     WebElement firstname;
     @FindBy(id = "last_name")
@@ -39,7 +39,7 @@ public class AddNewUser {
         username.sendKeys("admin");
     }
     public void setEmail() {
-        Email.sendKeys("");
+        email.sendKeys("pradhanrajnishbltr21@outlook.com");
     }
     public void setFirstname() {
         firstname.sendKeys("Rajnish");
