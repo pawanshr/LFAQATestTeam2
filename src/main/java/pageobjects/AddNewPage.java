@@ -10,29 +10,33 @@ public class AddNewPage {
     WebDriver driver;
     @FindBy (id = "title")
     WebElement addtitle;
+
     @FindBy (id = "tinymce")
     WebElement pagecontent;
-    @FindBy (id = "publish")
+
+    @FindBy (xpath = ".//*[@id='publish']")
     WebElement publishpage;
+
     @FindBy (id = "post-preview")
     WebElement preview;
+
     @FindBy(id = "content_ifr")
     WebElement frame;
+
     @FindBy(id = "tinymce")
     WebElement body;
 
     public AddNewPage(WebDriver driver){
         this.driver = driver;
     }
+
     public void doAddtitle(String addtitletext) {
         addtitle.sendKeys(addtitletext); }
 
     public void addpagecontent(String addpagecontenttext){
-
         driver.switchTo().frame(frame);
         body.sendKeys(addpagecontenttext);
-
-
+        driver.switchTo().defaultContent();
     }
 
     public void dopublishpage(){
