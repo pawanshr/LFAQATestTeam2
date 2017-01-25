@@ -21,14 +21,23 @@ public class AddNewPost {
     @FindBy(id = "publish")
     WebElement publish;
 
-    public AddNewPost(WebDriver driver) {
+    public AddNewPost(WebDriver driver){
         this.driver = driver;
     }
-    public void doAddNewPost() {
-        title.sendKeys("chandagiri is beautiful and fun");
-        paragraph.sendKeys("chandagiri is located in thankot .you can view changagiri hills by cable car");
+
+    public void dotitle(String titletext) {
+        title.sendKeys(titletext);
+    }
+
+    public void paragraph(String paragraphtext){
+        paragraph.sendKeys(paragraphtext);
+    }
+
+    public void dopublish(){
+
         publish.click();
     }
+
 }
 
 
