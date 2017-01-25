@@ -18,6 +18,9 @@ public class AddNewPost {
     @FindBy(id = "tinymce")
     WebElement paragraph;
 
+    @FindBy(id = "content_ifr")
+    WebElement frame;
+
     @FindBy(id = "publish")
     WebElement publish;
 
@@ -30,8 +33,11 @@ public class AddNewPost {
     }
 
     public void paragraph(String paragraphtext){
+        driver.switchTo().frame(frame);
         paragraph.sendKeys(paragraphtext);
+        driver.switchTo().parentFrame();
     }
+
 
     public void dopublish(){
 
