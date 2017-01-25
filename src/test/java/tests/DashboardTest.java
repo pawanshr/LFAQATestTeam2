@@ -22,7 +22,6 @@ public class DashboardTest extends BaseTest {
         login.setLogin();
 
         pageobjects.Dashboard dashboard = new pageobjects.Dashboard(driver);
-        PageFactory.initElements(driver,dashboard);
         dashboard.gotohomeLink();
 
 

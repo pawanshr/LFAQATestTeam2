@@ -23,7 +23,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://localhost/wordpress/wp-admin");
         login=new Login(driver);
-        PageFactory.initElements(driver,login);
+      //  PageFactory.initElements(driver,login);
     }
 
     @After
