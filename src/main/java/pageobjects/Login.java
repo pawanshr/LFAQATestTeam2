@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by Ujjwal on 1/18/2017.
@@ -21,7 +22,7 @@ public class Login {
     WebElement login;
 
    public Login(WebDriver driver){
-
+       PageFactory.initElements(driver,this);
        this.driver=driver;
 
    }
