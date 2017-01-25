@@ -23,15 +23,17 @@ public class UserTest extends BaseTest{
 
         AddNewUser addNewUser=new AddNewUser(driver);
         PageFactory.initElements(driver,addNewUser);
-        addNewUser.setUsername();
-        addNewUser.setEmail();
-        addNewUser.setFirstname();
-        addNewUser.setlastname();
-        addNewUser.setwebsite();
-        addNewUser.setPassword();
-        addNewUser.setSendusernotification();
-        addNewUser.setRole();
+        addNewUser.setUsername("Rajnish");
+        addNewUser.setEmail("pradhanrajnishbltr21@outlook.com");
+        addNewUser.setFirstname("Rajnish");
+        addNewUser.setlastname("Pradhan");
+        addNewUser.setwebsite("www.rajnish.com.np");
+        addNewUser.setPassclick();
+        addNewUser.setPassword("admin123");
+        //addNewUser.setSendusernotification();
+        addNewUser.setRole("Administrator");
         addNewUser.setSubmitbutton();
+
 
     }
 }
