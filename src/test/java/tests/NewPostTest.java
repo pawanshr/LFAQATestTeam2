@@ -20,7 +20,6 @@ public class NewPostTest extends BaseTest {
         login.setLogin();
 
 
-
         Dashboard dashboard=new Dashboard(driver);
         PageFactory.initElements(driver,dashboard);
 
@@ -28,7 +27,7 @@ public class NewPostTest extends BaseTest {
         dashboard.gotoAddNewPost();
 
         AddNewPost addNewPost=new AddNewPost(driver);
-        PageFactory.initElements(driver,addNewPost);
+
         addNewPost.dotitle("title");
         addNewPost.paragraph("paragraph");
         addNewPost.dopublish();
