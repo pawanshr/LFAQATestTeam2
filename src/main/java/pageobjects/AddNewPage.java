@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 /**
  * Created by thapa on 1/18/2017.
  */
@@ -27,7 +29,10 @@ public class AddNewPage {
     WebElement body;
 
     public AddNewPage(WebDriver driver){
+
         this.driver = driver;
+        PageFactory.initElements(driver,this);
+
     }
 
     public void doAddtitle(String addtitletext) {
@@ -36,7 +41,7 @@ public class AddNewPage {
     public void addpagecontent(String addpagecontenttext){
         driver.switchTo().frame(frame);
         body.sendKeys(addpagecontenttext);
-        driver.switchTo().defaultContent();
+        driver.switchTo().parentFrame();
     }
 
     public void dopublishpage(){
