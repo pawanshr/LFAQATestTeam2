@@ -2,6 +2,7 @@ package tests;
 
 import org.apache.bcel.generic.NEW;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,10 @@ public class LoginTest extends BaseTest{
         login.setUsername("admin");
         login.setPassword("admin");
         login.setLogin();
+
+        Dashboard dashboard= new Dashboard(driver);
+        String heading=dashboard.getSomeText();
+        Assert.assertEquals("Dashboard",heading);
     }
     @Test
     public void testThatLoginDosentWork(){

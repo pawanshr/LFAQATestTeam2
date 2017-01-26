@@ -33,6 +33,9 @@ public class Dashboard {
     @FindBy(xpath=".//*[@id='menu-users']/ul/li[3]/a")
     WebElement addNewUserLink;
 
+    @FindBy(xpath=".//*[@id='wpbody-content']/div[3]/h1")
+    WebElement dashboardHeadingText;
+
     public Dashboard(WebDriver driver) {
 
         this.driver = driver;
@@ -65,6 +68,11 @@ public class Dashboard {
 
     public void gotoAddNewUser() {
        addNewUserLink.click();
+    }
+
+    public String getSomeText(){
+       String heading=  dashboardHeadingText.getText();
+       return heading;
     }
 
 }
