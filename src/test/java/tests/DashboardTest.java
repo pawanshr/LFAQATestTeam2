@@ -1,14 +1,8 @@
 package tests;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
-import pageobjects.Login;
-
-import java.sql.Driver;
+import pageobjects.dashboard.Dashboard;
 
 /**
  * Created by superuser on 1/22/2017.
@@ -21,10 +15,10 @@ public class DashboardTest extends BaseTest {
         login.setPassword("admin");
         login.setLogin();
 
-        pageobjects.Dashboard dashboard = new pageobjects.Dashboard(driver);
+        Dashboard dashboard=new Dashboard(driver);
+        String heading =dashboard.getSomeText();
         dashboard.gotohomeLink();
-
-
+        Assert.assertEquals("Dashboard",heading);
 
     }
 
