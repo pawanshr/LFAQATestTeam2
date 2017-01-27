@@ -1,5 +1,12 @@
 package tests;
 
+<<<<<<< HEAD
+=======
+import org.apache.bcel.generic.NEW;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+>>>>>>> da100a2bb36c515ceb76814aef0bba12309a8793
 import org.junit.Test;
 
 /**
@@ -11,6 +18,10 @@ public class LoginTest extends BaseTest{
         login.setUsername("admin");
         login.setPassword("admin");
         login.setLogin();
+
+        Dashboard dashboard= new Dashboard(driver);
+        String heading=dashboard.getSomeText();
+        Assert.assertEquals("Dashboard",heading);
     }
     @Test
     public void testThatLoginDosentWork(){
