@@ -21,6 +21,8 @@ public class UserTest extends BaseTest{
         dashboard.gotoAddNewUser();
 
 
+
+
         AddNewUser addNewUser=new AddNewUser(driver);
         PageFactory.initElements(driver,addNewUser);
         addNewUser.setUsername("Rajnish");
@@ -33,6 +35,13 @@ public class UserTest extends BaseTest{
         //addNewUser.setSendusernotification();
         addNewUser.setRole("Administrator");
         addNewUser.setSubmitbutton();
+
+
+
+    }
+
+    @Test
+    public void validateThatAddNewUserPageOpensWhileWeClickUsersLink() {
 
 
     }
