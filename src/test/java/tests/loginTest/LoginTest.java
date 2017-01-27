@@ -5,9 +5,9 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pageobjects.Dashboard;
-import org.junit.Test;
+import pageobjects.dashboard.Dashboard;
 import tests.BaseTest;
+
 
 /**
  * Created by Ujjwal on 1/18/2017.

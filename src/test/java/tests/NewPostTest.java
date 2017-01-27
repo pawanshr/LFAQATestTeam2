@@ -3,7 +3,8 @@ package tests;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.AddNewPost;
-import pageobjects.Dashboard;
+
+import pageobjects.dashboard.Dashboard;
 
 /**
  * Created by Genelia on 20/01/2017.
