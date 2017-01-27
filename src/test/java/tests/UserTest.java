@@ -2,8 +2,10 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
+import pageobjects.dashboard.Dashboard;
 import pageobjects.users.AddNewUser;
-import pageobjects.Dashboard;
+
+
 
 /**
  * Created by RajniSh on 1/24/2017.
@@ -21,6 +23,8 @@ public class UserTest extends BaseTest{
         dashboard.gotoAddNewUser();
 
 
+
+
         AddNewUser addNewUser=new AddNewUser(driver);
         PageFactory.initElements(driver,addNewUser);
         addNewUser.setUsername("Rajnish");
@@ -33,6 +37,13 @@ public class UserTest extends BaseTest{
         //addNewUser.setSendusernotification();
         addNewUser.setRole("Administrator");
         addNewUser.setSubmitbutton();
+
+
+
+    }
+
+    @Test
+    public void validateThatAddNewUserPageOpensWhileWeClickUsersLink() {
 
 
     }

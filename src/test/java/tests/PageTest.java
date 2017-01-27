@@ -2,8 +2,8 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import pageobjects.AddNewPage;
-import pageobjects.Dashboard;
+import pageobjects.page.AddNewPage;
+import pageobjects.dashboard.Dashboard;
 
 /**
  * Created by Ujjwal on 1/23/2017.
