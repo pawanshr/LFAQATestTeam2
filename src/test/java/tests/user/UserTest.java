@@ -3,7 +3,7 @@ package tests.user;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.dashboard.Dashboard;
-import pageobjects.users.AddNewUser;
+import pageobjects.user.AddNewUser;
 import tests.BaseTest;
 
 
