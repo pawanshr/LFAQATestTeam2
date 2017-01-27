@@ -3,6 +3,7 @@ package tests;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.AddNewPost;
+
 import pageobjects.dashboard.Dashboard;
 
 /**
