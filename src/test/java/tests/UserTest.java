@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import pageobjects.AddNewUser;
+import pageobjects.users.AddNewUser;
 import pageobjects.Dashboard;
 
 /**
