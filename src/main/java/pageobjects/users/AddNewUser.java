@@ -39,29 +39,36 @@ public class AddNewUser {
 
     @FindBy(id = "add-new-user")
     WebElement addnewuser;
+
     public AddNewUser(WebDriver driver) {
         this.driver = driver;
     }
+
     public void setUsername(String usernametext) {
         username.sendKeys(usernametext);
     }
+
     public void setEmail(String emailtext) {
         email.sendKeys(emailtext);
     }
+
     public void setFirstname(String firstnametext) {
         firstname.sendKeys(firstnametext);
     }
-    public void setlastname(String lastnametext){
+
+    public void setlastname(String lastnametext) {
         lastname.sendKeys(lastnametext);
     }
-    public  void setwebsite(String websitetext){
+
+    public void setwebsite(String websitetext) {
         url.sendKeys(websitetext);
     }
 
-    public void setPassclick(){
+    public void setPassclick() {
         passclick.click();
     }
-    public  void setPassword(String passwordtext){
+
+    public void setPassword(String passwordtext) {
 
         pass1text.clear();
         pass1text.sendKeys(passwordtext);
@@ -69,20 +76,21 @@ public class AddNewUser {
         pass1text.sendKeys(passwordtext);
 
     }
-    public  void setSendusernotification(){
+
+    public void setSendusernotification() {
         send_user_notification.click();
     }
-    public  void setRole(String roletext){
-        Select dropdown=new Select(role);
+
+    public void setRole(String roletext) {
+        Select dropdown = new Select(role);
         dropdown.selectByVisibleText(roletext);
     }
-    public  void setSubmitbutton(){
+
+    public void setSubmitbutton() {
         createusersub.click();
     }
+}
 
-    public String getAdd
 
-
-    }
 
 

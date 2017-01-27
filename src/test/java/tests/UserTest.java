@@ -20,7 +20,7 @@ public class UserTest extends BaseTest{
         dashboard.gotoUsers();
         dashboard.gotoAddNewUser();
 
-        
+
 
 
         AddNewUser addNewUser=new AddNewUser(driver);
@@ -43,9 +43,6 @@ public class UserTest extends BaseTest{
     @Test
     public void validateThatAddNewUserPageOpensWhileWeClickUsersLink() {
 
-
-
-        addNewUser.getAddNewUerPageText();
 
     }
 }
