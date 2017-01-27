@@ -1,15 +1,12 @@
 package tests.loginTest;
 
-
+import org.apache.bcel.generic.NEW;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import pageobjects.dashboard.Dashboard;
-import org.junit.Assert;
-import org.junit.Test;
 import tests.BaseTest;
-import org.junit.Test;
-
 
 
 /**
