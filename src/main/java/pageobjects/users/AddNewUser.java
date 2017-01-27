@@ -36,6 +36,9 @@ public class AddNewUser {
     WebElement role;
     @FindBy(id = "createusersub")
     WebElement createusersub;
+
+    @FindBy(id = "add-new-user")
+    WebElement addnewuser;
     public AddNewUser(WebDriver driver) {
         this.driver = driver;
     }
@@ -75,6 +78,9 @@ public class AddNewUser {
     }
     public  void setSubmitbutton(){
         createusersub.click();
+    }
+  
+
     }
 
 }

@@ -35,5 +35,15 @@ public class UserTest extends BaseTest{
         addNewUser.setSubmitbutton();
 
 
+
+    }
+
+    @Test
+    public void validateThatAddNewUserPageOpensWhileWeClickUsersLink() {
+
+
+
+        addNewUser.getAddNewUerPageText();
+
     }
 }
