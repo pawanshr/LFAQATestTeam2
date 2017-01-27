@@ -1,13 +1,10 @@
-package tests;
+package tests.PostTest;
 
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import pageobjects.AddNewPage;
-import pageobjects.AddNewPost;
+import pageobjects.Posts.AddNewPost;
 import pageobjects.Dashboard;
-import pageobjects.Login;
+import tests.BaseTest;
 
 /**
  * Created by Genelia on 20/01/2017.
