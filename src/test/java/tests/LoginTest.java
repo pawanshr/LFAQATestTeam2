@@ -1,13 +1,12 @@
 package tests;
 
-<<<<<<< HEAD
-=======
+
 import org.apache.bcel.generic.NEW;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
->>>>>>> da100a2bb36c515ceb76814aef0bba12309a8793
 import org.junit.Test;
+import pageobjects.Dashboard;
 
 /**
  * Created by Ujjwal on 1/18/2017.
