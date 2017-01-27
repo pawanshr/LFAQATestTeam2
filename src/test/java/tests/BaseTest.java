@@ -4,8 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
-import pageobjects.Login;
+import pageobjects.login.Login;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,8 +13,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class BaseTest {
 
-     Login login;
-     WebDriver driver;
+     protected Login login;
+     protected WebDriver driver;
     @Before
     public void setup(){
         System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");

@@ -1,14 +1,6 @@
 package tests;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
-import pageobjects.Login;
-
-import java.sql.Driver;
 
 /**
  * Created by superuser on 1/22/2017.
