@@ -79,8 +79,10 @@ public class AddNewUser {
     public  void setSubmitbutton(){
         createusersub.click();
     }
-  
+
+    public String getAdd
+
 
     }
 
-}
+

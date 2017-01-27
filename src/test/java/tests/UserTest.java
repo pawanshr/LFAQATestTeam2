@@ -20,6 +20,8 @@ public class UserTest extends BaseTest{
         dashboard.gotoUsers();
         dashboard.gotoAddNewUser();
 
+        
+
 
         AddNewUser addNewUser=new AddNewUser(driver);
         PageFactory.initElements(driver,addNewUser);
