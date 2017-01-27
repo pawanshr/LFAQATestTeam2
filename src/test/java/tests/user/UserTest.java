@@ -1,16 +1,16 @@
-package tests;
+package tests.user;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.dashboard.Dashboard;
 import pageobjects.users.AddNewUser;
-
+import tests.BaseTest;
 
 
 /**
  * Created by RajniSh on 1/24/2017.
  */
-public class UserTest extends BaseTest{
+public class UserTest extends BaseTest {
     @Test
     public void testThatAddNewUserWorks(){
         login.setUsername("admin");

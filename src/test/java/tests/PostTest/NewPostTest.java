@@ -2,7 +2,7 @@ package tests.PostTest;
 
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import pageobjects.Posts.AddNewPost;
+import pageobjects.post.AddNewPost;
 import pageobjects.dashboard.Dashboard;
 import tests.BaseTest;
 

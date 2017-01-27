@@ -1,9 +1,9 @@
-package tests;
+package tests.dashoard;
 
 import org.junit.Assert;
 import org.junit.Test;
 import pageobjects.dashboard.Dashboard;
-
+import tests.BaseTest;
 
 
 /**
