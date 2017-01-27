@@ -1,4 +1,4 @@
-package pageobjects;
+package pageobjects.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,6 +51,8 @@ public class AddNewPage {
     public void seepreview() {
         preview.click();
     }
+
+
 
 
 
