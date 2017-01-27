@@ -33,8 +33,7 @@ public class AddNewUser {
     @FindBy(id = "createusersub")
     WebElement createusersub;
 
-    @FindBy(id = "add-new-user")
-    WebElement addnewuser;
+
 
     public AddNewUser(WebDriver driver) {
         this.driver = driver;
