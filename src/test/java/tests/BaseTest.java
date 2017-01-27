@@ -15,6 +15,7 @@ public class BaseTest {
 
      protected Login login;
      protected WebDriver driver;
+
     @Before
     public void setup(){
         System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
