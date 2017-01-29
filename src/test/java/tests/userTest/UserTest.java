@@ -1,6 +1,7 @@
 package tests.userTest;
 
 import org.junit.Test;
+import org.openqa.selenium.support.PageFactory;
 import pageobjects.dashboard.Dashboard;
 import pageobjects.user.AddNewUser;
 import tests.BaseTest;
@@ -28,7 +29,7 @@ public class UserTest extends BaseTest{
             addNewUser.setPassclick();
             addNewUser.setPassword("admin");
             addNewUser.setSendusernotification();
-            addNewUser.setRole("Adminstrator");
+            addNewUser.setRole("Administrator");
             addNewUser.setSubmitbutton();
         }
     }

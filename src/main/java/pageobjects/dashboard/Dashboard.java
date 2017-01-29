@@ -27,18 +27,16 @@ public class Dashboard {
     @FindBy(xpath=".//*[@id='menu-pages']/ul/li[3]/a")
     WebElement addNewPageLink;
 
-    @FindBy(xpath=".//*[@id='menu-user']/a/div[3]")
+    @FindBy(xpath=".//*[@id='menu-users']/a/div[3]")
     WebElement users;
 
-    @FindBy(xpath=".//*[@id='menu-user']/ul/li[3]/a")
+    @FindBy(xpath=".//*[@id='menu-users']/ul/li[3]/a")
     WebElement addNewUserLink;
 
     @FindBy(xpath=".//*[@id='wpbody-content']/div[3]/h1")
     WebElement dashboardHeadingText;
 
     public Dashboard(WebDriver driver) {
-
-        this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 
