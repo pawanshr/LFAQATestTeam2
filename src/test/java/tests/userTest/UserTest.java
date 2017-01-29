@@ -1,5 +1,6 @@
 package tests.userTest;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.dashboard.Dashboard;
@@ -32,5 +33,16 @@ public class UserTest extends BaseTest{
             addNewUser.setRole("Administrator");
             addNewUser.setSubmitbutton();
         }
+    @Test
+    public void testThatVerifyWhetherTheUserPageIsClickedOrNot(){
+        login.setUsername("admin");
+        login.setPassword("admin");
+        login.setLogin();
+
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoUsers();
+        String heading=dashboard.getSomeText();
+        Assert.assertEquals("Users Add New",heading);
+    }
     }
 

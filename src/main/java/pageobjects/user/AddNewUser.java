@@ -33,6 +33,8 @@ public class AddNewUser {
     WebElement role;
     @FindBy(id = "createusersub")
     WebElement createusersub;
+    @FindBy(xpath = ".//*[@id='wpbody-content']/div[3]/h1")
+    WebElement userheadingtext;
 
 
 
@@ -84,6 +86,11 @@ public class AddNewUser {
 
     public void setSubmitbutton() {
         createusersub.click();
+    }
+    public String getSomeText() {
+        String heading=userheadingtext.getText();
+        return heading;
+
     }
 }
 
