@@ -24,6 +24,10 @@ public class AddNewPost {
     @FindBy(id = "publish")
     WebElement publish;
 
+    @FindBy(xpath = ".//*[@id='wpbody-content']/div[3]/h1")
+    WebElement postheadingtext;
+
+
     public AddNewPost(WebDriver driver){
 
         this.driver = driver;
@@ -46,6 +50,11 @@ public class AddNewPost {
     public void dopublish(){
 
         publish.click();
+    }
+    public String getSomeText() {
+        String heading1=postheadingtext.getText();
+        return heading1;
+
     }
 
 }
