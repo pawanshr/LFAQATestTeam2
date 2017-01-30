@@ -6,17 +6,14 @@ import org.openqa.selenium.support.PageFactory;
 import pageobjects.dashboard.Dashboard;
 import pageobjects.user.AddNewUser;
 import tests.BaseTest;
+import tests.BaseTestLogin;
 
 /**
  * Created by RajniSh on 1/27/2017.
  */
-public class UserTest extends BaseTest{
+public class UserTest extends BaseTestLogin{
         @Test
         public void testThatAddNewUserWorks(){
-            login.setUsername("admin");
-            login.setPassword("admin");
-            login.setLogin();
-
             Dashboard dashboard=new Dashboard(driver);
             dashboard.gotoUsers();
             dashboard.gotoAddNewUser();
