@@ -25,8 +25,6 @@ public class PageTest extends BaseTestLogin {
         addNewPage.doAddtitle("this is the title page");
         addNewPage.addpagecontent("this is where my content goes");
         addNewPage.dopublishpage();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 
         String title = addNewPage.titleofpage();
         Assert.assertEquals("Page published",title);
