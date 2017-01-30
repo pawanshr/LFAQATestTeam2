@@ -1,5 +1,6 @@
 package pageobjects.page;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,10 +14,12 @@ public class AddNewPage {
     @FindBy (id = "title")
     WebElement addtitle;
 
+/*
     @FindBy (id = "tinymce")
     WebElement pagecontent;
+*/
 
-    @FindBy (xpath = ".//*[@id='publish']")
+    @FindBy (id = "publish")
     WebElement publishpage;
 
     @FindBy (id = "post-preview")
@@ -27,6 +30,9 @@ public class AddNewPage {
 
     @FindBy(id = "tinymce")
     WebElement body;
+
+    @FindBy(linkText = "this is the title page")
+    WebElement newpage;
 
     public AddNewPage(WebDriver driver){
 
@@ -46,13 +52,17 @@ public class AddNewPage {
 
     public void dopublishpage(){
         publishpage.click();
+
     }
 
     public void seepreview() {
         preview.click();
     }
 
-
+    public String titleofpage(){
+        String title = newpage.getText();
+        return  title;
+    }
 
 
 

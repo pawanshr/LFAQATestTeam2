@@ -1,5 +1,6 @@
 package tests.page;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.page.AddNewPage;
@@ -24,6 +25,13 @@ public class PageTest extends BaseTest {
         addNewPage.doAddtitle("this is the title page");
         addNewPage.addpagecontent("this is where my content goes");
         addNewPage.dopublishpage();
+
+        Dashboard dashboard1=new Dashboard(driver);
+        dashboard1.gotoPages();
+
+        AddNewPage addNewPage1=new AddNewPage(driver);
+        String title = addNewPage1.titleofpage();
+        Assert.assertEquals("this is the title page",title);
 
 
     }
