@@ -29,6 +29,9 @@ public class LoginTest extends BaseTest {
         login.setPassword("admin");
         login.setLogin();
 
+        String errorText=login.setError();
+        Assert.assertEquals("ERROR",errorText);
+
     }
 
 }
