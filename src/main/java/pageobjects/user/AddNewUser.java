@@ -3,6 +3,7 @@ package pageobjects.user;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 /**
@@ -32,12 +33,13 @@ public class AddNewUser {
     WebElement role;
     @FindBy(id = "createusersub")
     WebElement createusersub;
+    @FindBy(xpath = ".//*[@id='wpbody-content']/div[3]/h1")
+    WebElement userheadingtext;
 
-    @FindBy(id = "add-new-user")
-    WebElement addnewuser;
+
 
     public AddNewUser(WebDriver driver) {
-        this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
     public void setUsername(String usernametext) {
@@ -84,6 +86,11 @@ public class AddNewUser {
 
     public void setSubmitbutton() {
         createusersub.click();
+    }
+    public String getSomeText() {
+        String heading=userheadingtext.getText();
+        return heading;
+
     }
 }
 
