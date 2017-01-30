@@ -22,7 +22,7 @@ public class BaseTest {
         driver=new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://localhost/wordpress/wp-admin");
-        login=new Login(driver);
+
       //  PageFactory.initElements(driver,login);
     }
 
