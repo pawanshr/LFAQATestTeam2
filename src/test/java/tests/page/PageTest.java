@@ -7,6 +7,8 @@ import pageobjects.page.AddNewPage;
 import pageobjects.dashboard.Dashboard;
 import tests.BaseTest;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by Ujjwal on 1/23/2017.
  */
@@ -25,13 +27,11 @@ public class PageTest extends BaseTest {
         addNewPage.doAddtitle("this is the title page");
         addNewPage.addpagecontent("this is where my content goes");
         addNewPage.dopublishpage();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        Dashboard dashboard1=new Dashboard(driver);
-        dashboard1.gotoPages();
 
-        AddNewPage addNewPage1=new AddNewPage(driver);
-        String title = addNewPage1.titleofpage();
-        Assert.assertEquals("this is the title page",title);
+        String title = addNewPage.titleofpage();
+        Assert.assertEquals("Page published",title);
 
 
     }
