@@ -21,6 +21,9 @@ public class Login {
     @FindBy(id = "wp-submit")
     WebElement login;
 
+    @FindBy(xpath =".//*[@id='login_error']/strong")
+    WebElement error;
+
    public Login(WebDriver driver){
        PageFactory.initElements(driver,this);
        this.driver=driver;
@@ -40,6 +43,10 @@ public class Login {
     //click the submit button
     public void setLogin(){
         login.click();
+    }
+    public String setError(){
+        String errortext=error.getText();
+        return errortext;
     }
 
 }
