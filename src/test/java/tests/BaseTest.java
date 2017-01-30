@@ -20,6 +20,7 @@ public class BaseTest {
     public void setup(){
         System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
         driver=new FirefoxDriver();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://localhost/wordpress/wp-admin");
         login=new Login(driver);
