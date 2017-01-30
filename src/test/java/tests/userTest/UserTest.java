@@ -32,14 +32,10 @@ public class UserTest extends BaseTestLogin{
         }
     @Test
     public void testThatVerifyWhetherTheUserPageIsClickedOrNot(){
-        login.setUsername("admin");
-        login.setPassword("admin");
-        login.setLogin();
-
         Dashboard dashboard=new Dashboard(driver);
         dashboard.gotoUsers();
         String heading=dashboard.getSomeText();
         Assert.assertEquals("Users Add New",heading);
     }
-    }
+}
 
