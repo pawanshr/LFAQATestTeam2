@@ -31,7 +31,7 @@ public class AddNewPage {
     @FindBy(id = "tinymce")
     WebElement body;
 
-    @FindBy(linkText = "this is the title page")
+    @FindBy(xpath = ".//div[\"message\"]/p[contains(text(),\"published\")]")
     WebElement newpage;
 
     public AddNewPage(WebDriver driver){
@@ -52,6 +52,7 @@ public class AddNewPage {
 
     public void dopublishpage(){
         publishpage.click();
+
 
     }
 
