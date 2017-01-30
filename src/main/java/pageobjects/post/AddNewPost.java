@@ -27,36 +27,25 @@ public class AddNewPost {
     @FindBy(xpath = ".//*[@id='wpbody-content']/div[3]/h1")
     WebElement postheadingtext;
 
-
     public AddNewPost(WebDriver driver){
-
         this.driver = driver;
-
         PageFactory.initElements(driver,this);
-
     }
-
     public void dotitle(String titletext) {
         title.sendKeys(titletext);
     }
-
     public void paragraph(String paragraphtext){
         driver.switchTo().frame(frame);
         paragraph.sendKeys(paragraphtext);
         driver.switchTo().parentFrame();
     }
-
-
     public void dopublish(){
-
         publish.click();
     }
     public String getSomeText() {
         String heading1=postheadingtext.getText();
         return heading1;
-
     }
-
 }
 
 
