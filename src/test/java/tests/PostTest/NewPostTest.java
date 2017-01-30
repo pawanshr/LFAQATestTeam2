@@ -21,11 +21,8 @@ public class NewPostTest extends BaseTest {
         Dashboard dashboard=new Dashboard(driver);
         PageFactory.initElements(driver,dashboard);
         dashboard.gotoPosts();
+        dashboard.gotoAddNewPost();
 
-        Dashboard dashboard1=new Dashboard(driver);
-        dashboard1.gotoAddNewPost();
-        String heading=dashboard1.getSomeText();
-        Assert.assertEquals("Add New Post",heading);
 
 
         AddNewPost addNewPost=new AddNewPost(driver);
@@ -35,6 +32,22 @@ public class NewPostTest extends BaseTest {
 
 
     }
+    @Test
+    public void testThatVerifyWhetherThePostPageIsClickedOrNot(){
+        login.setUsername("admin");
+        login.setPassword("admin");
+        login.setLogin();
 
+        Dashboard dashboard1=new Dashboard(driver);
+
+        dashboard1.gotoPosts();
+        dashboard1.gotoAddNewPost();
+
+        AddNewPost addNewPost= new AddNewPost(driver);
+        String heading1=addNewPost.getSomeText();
+
+        Assert.assertEquals("Add New Post",heading1);
+
+    }
 
 }

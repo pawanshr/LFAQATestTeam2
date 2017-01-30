@@ -52,8 +52,8 @@ public class AddNewPost {
         publish.click();
     }
     public String getSomeText() {
-        String heading=postheadingtext.getText();
-        return heading;
+        String heading1=postheadingtext.getText();
+        return heading1;
 
     }
 
