@@ -26,8 +26,9 @@ public class PageTest extends BaseTestLogin {
         addNewPage.addpagecontent("this is where my content goes");
         addNewPage.dopublishpage();
 
+
         String title = addNewPage.titleofpage();
-        Assert.assertEquals("Page published",title);
+        Assert.assertEquals("Page published. View page",title);
 
 
     }

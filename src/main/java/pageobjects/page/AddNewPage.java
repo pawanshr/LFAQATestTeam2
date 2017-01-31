@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by thapa on 1/18/2017.
@@ -13,11 +15,6 @@ public class AddNewPage {
     WebDriver driver;
     @FindBy (id = "title")
     WebElement addtitle;
-
-/*
-    @FindBy (id = "tinymce")
-    WebElement pagecontent;
-*/
 
     @FindBy (id = "publish")
     WebElement publishpage;
@@ -52,8 +49,8 @@ public class AddNewPage {
 
     public void dopublishpage(){
         publishpage.click();
-
-
+        WebDriverWait w = new WebDriverWait(driver,15);
+        w.until(ExpectedConditions.elementToBeClickable(publishpage));
     }
 
     public void seepreview() {
