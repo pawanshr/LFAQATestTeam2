@@ -29,6 +29,9 @@ public class UserTest extends BaseTestLogin{
             addNewUser.setSendusernotification();
             addNewUser.setRole("Administrator");
             addNewUser.setSubmitbutton();
+
+            String heading1=dashboard.getSomeText();
+            Assert.assertEquals("Add New User",heading1);
         }
     @Test
     public void testThatVerifyWhetherTheUserPageIsClickedOrNot(){
