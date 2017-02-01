@@ -22,18 +22,18 @@ public class BaseTest {
 
     @Before
     public void setup(){
-        //System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
+        System.setProperty("webdriver.firefox.marionette","C:\\Leapfrog\\geckodriver.exe");
         //System.setProperty("webdriver.chrome.driver","C:\\Leapfrog\\chromedriver.exe");
-        System.setProperty("webdriver.ie.driver","C:\\Leapfrog\\IEDriverServer.exe");
+        //System.setProperty("webdriver.ie.driver","C:\\Leapfrog\\IEDriverServer.exe");
 
-        //driver=new FirefoxDriver();
+        driver=new FirefoxDriver();
         //driver = new ChromeDriver();
-        InternetExplorerDriverService service = new InternetExplorerDriverService.Builder().build();
+        /*InternetExplorerDriverService service = new InternetExplorerDriverService.Builder().build();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
         capabilities.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP,true);
         capabilities.setCapability("enablePersistentHover", false);
-        driver = new InternetExplorerDriver(service, capabilities);
+        driver = new InternetExplorerDriver(service, capabilities);*/
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
