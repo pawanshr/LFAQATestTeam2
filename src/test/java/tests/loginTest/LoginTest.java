@@ -81,9 +81,9 @@ public class LoginTest extends BaseTest {
         login.setLogin();
     }
     @Test
-    //Incorrect 256 character username and valid password
+    //Incorrect 61 character username and valid password
     public void testThatLoginDosentWork7() {
-        login.setUsername("rrjndjdhddjfdfhdfdjhdjhfdkjfhdkjfdfjddjdjdduddjdhdydhdydjdhdydhdjdhdjdhdjdhdjdhdjddklolkio90imjuujdu87djdjjdjdkdjdkddijkkkkllkdidkdjdjdjdjdiui87udjdndjjdjjdhdjduyddhdkkkkddhjduidiud8idudidud8d8dd8d8dj");
+        login.setUsername("fajdhfjkdhfajkdhfajkdhfajkdhfkajdfhajksfhdjkakjdfhjdkakjdfhaa");
         login.setPassword("admin");
         login.setLogin();
     }
@@ -109,9 +109,9 @@ public class LoginTest extends BaseTest {
         login.setLogin();
     }
     @Test
-    //username with 255 characters and valid password
+    //username with 60 characters and valid password
     public void testThatLoginDosentWork11() {
-        login.setUsername("admin123fjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjf");
+        login.setUsername("admin123fjfjfjfjfjfjffdfhdjfhdjfhdjfhddhfjdfhdjfhdjfhjdddhfjjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjf");
         login.setPassword("admin");
         login.setLogin();
     }
