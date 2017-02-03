@@ -1,8 +1,5 @@
 package pageobjects.page;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,9 +45,10 @@ public class AddNewPage {
     }
 
     public void dopublishpage(){
-        publishpage.click();
         WebDriverWait w = new WebDriverWait(driver,15);
-        w.until(ExpectedConditions.elementToBeClickable(publishpage));
+        w.until(ExpectedConditions.elementToBeSelected(publishpage));
+        publishpage.click();
+
     }
 
     public void seepreview() {
