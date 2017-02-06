@@ -41,6 +41,10 @@ public class Dashboard {
 
     @FindBy(xpath=".//*[@id='menu-users']/ul/li[3]/a")
     WebElement addNewUserLink;
+    @FindBy(xpath = ".//*[@id='menu-users']/ul/li[4]/a")
+    WebElement yourProfile;
+    @FindBy(xpath = ".//*[@id='menu-users']/ul/li[2]/a")
+    WebElement allUsers;
 
     @FindBy(xpath=".//*[@id='wpbody-content']/div[3]/h1")
     WebElement dashboardHeadingText;
@@ -84,6 +88,12 @@ public class Dashboard {
     public void gotoAddNewUser(){
         new Actions(driver).moveToElement(usersLink).build().perform();
         new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOf(addNewUserLink)).click();
+    }
+    public void gotYourProfile(){
+        yourProfile.click();
+    }
+    public void gotoAllUsers(){
+        allUsers.click();
     }
 
     public String getSomeText(){
