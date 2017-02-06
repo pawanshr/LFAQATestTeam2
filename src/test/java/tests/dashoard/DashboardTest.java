@@ -1,5 +1,6 @@
 package tests.dashoard;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import pageobjects.dashboard.Dashboard;
@@ -21,4 +22,13 @@ public class DashboardTest extends BaseTestLogin {
 
     }
 
+    @Test
+    public void testThatSettingsGeneralPageOpens(){
+        (new Dashboard(driver)).gotoSettings();
+    }
+
+    @After
+    public void teardown(){
+
+    }
 }

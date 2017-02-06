@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by superuser on 1/18/2017.
@@ -36,8 +38,18 @@ public class Dashboard {
     @FindBy(xpath=".//*[@id='wpbody-content']/div[3]/h1")
     WebElement dashboardHeadingText;
 
+    @FindBy(xpath = ".//*[@id='menu-settings']/a")
+    WebElement settings;
+
+
+
     public Dashboard(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
+    }
+
+    public void gotoSettings() {
+        //(new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(settings));
+        settings.click();
     }
 
     public void gotohomeLink() {
@@ -49,7 +61,9 @@ public class Dashboard {
     }
 
     public void gotoAddNewPost() {
-        addNewPostLink.click();
+        //mouseover on page
+        //click on mouse over sub menu item = "Add New"
+
     }
 
     public void gotoPages(){
