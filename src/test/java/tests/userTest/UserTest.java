@@ -15,7 +15,6 @@ public class UserTest extends BaseTestLogin{
         @Test
         public void testThatAddNewUserWorks(){
             Dashboard dashboard=new Dashboard(driver);
-            dashboard.gotoUsers();
             dashboard.gotoAddNewUser();
 
             AddNewUser addNewUser=new AddNewUser(driver);
@@ -36,7 +35,6 @@ public class UserTest extends BaseTestLogin{
     @Test
     public void testThatVerifyWhetherTheUserPageIsClickedOrNot(){
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoUsers();
         String heading=dashboard.getSomeText();
         Assert.assertEquals("Users Add New",heading);
     }
