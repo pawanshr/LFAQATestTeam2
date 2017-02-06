@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.page.AddNewPage;
 import pageobjects.dashboard.Dashboard;
+import pageobjects.page.DeletePage;
 import tests.BaseTest;
 import tests.BaseTestLogin;
 
@@ -26,10 +27,21 @@ public class PageTest extends BaseTestLogin {
         addNewPage.addpagecontent("this is where my content goes");
         addNewPage.dopublishpage();
 
-
         String title = addNewPage.titleofpage();
         Assert.assertEquals("Page published. View page",title);
 
+    }
+    @Test
+    public void testthatDeletePageWorks(){
+        Dashboard dashboard = new Dashboard(driver);
+        dashboard.gotoPages();
 
+        DeletePage deletePage=new DeletePage(driver);
+        deletePage.clickoncheckbox();
+        deletePage.chooseaction("Move to Trash");
+        deletePage.applyaction();
+
+        String confirmation = deletePage.pagedeleted();
+        Assert.assertEquals("Undo",confirmation);
     }
 }

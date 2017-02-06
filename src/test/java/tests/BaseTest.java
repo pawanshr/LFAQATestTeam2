@@ -28,15 +28,14 @@ public class BaseTest {
 
         driver=new FirefoxDriver();
         //driver = new ChromeDriver();
-        /*InternetExplorerDriverService service = new InternetExplorerDriverService.Builder().build();
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-        capabilities.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP,true);
-        capabilities.setCapability("enablePersistentHover", false);
-        driver = new InternetExplorerDriver(service, capabilities);*/
+        //InternetExplorerDriverService service = new InternetExplorerDriverService.Builder().build();
+        //DesiredCapabilities capabilities = new DesiredCapabilities();
+        //capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+        //capabilities.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP,true);
+        //capabilities.setCapability("enablePersistentHover", false);
+        //driver = new InternetExplorerDriver(service, capabilities);
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://localhost/wordpress/wp-admin");
 
       //  PageFactory.initElements(driver,login);
