@@ -36,7 +36,6 @@ public class BaseTest {
         //driver = new InternetExplorerDriver(service, capabilities);
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://localhost/wordpress/wp-admin");
 
       //  PageFactory.initElements(driver,login);
