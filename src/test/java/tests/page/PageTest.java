@@ -1,5 +1,6 @@
 package tests.page;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,7 @@ import pageobjects.page.DeletePage;
 import tests.BaseTest;
 import tests.BaseTestLogin;
 
+import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,6 +27,8 @@ public class PageTest extends BaseTestLogin {
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("this is the title page");
         addNewPage.addpagecontent("this is where my content goes");
+
+
         addNewPage.dopublishpage();
 
         String title = addNewPage.titleofpage();
@@ -44,4 +48,76 @@ public class PageTest extends BaseTestLogin {
         String confirmation = deletePage.pagedeleted();
         Assert.assertEquals("Undo",confirmation);
     }
+    @Test
+    public void testthatAddPageWorkswithBlankTitle(){
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoPages();
+        dashboard.gotoAddNewPages();
+
+        AddNewPage addNewPage=new AddNewPage(driver);
+        addNewPage.doAddtitle("");
+        addNewPage.addpagecontent("this is where my content goes");
+
+
+        addNewPage.dopublishpage();
+
+        String title = addNewPage.titleofpage();
+        Assert.assertEquals("Page published. View page",title);
+    }
+    @Test
+    public void testthatAddPageWorkswithBlankContent(){
+
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoPages();
+        dashboard.gotoAddNewPages();
+
+        AddNewPage addNewPage=new AddNewPage(driver);
+        addNewPage.doAddtitle("this is the title page");
+
+        addNewPage.addpagecontent("");
+
+
+        addNewPage.dopublishpage();
+
+        String title = addNewPage.titleofpage();
+        Assert.assertEquals("Page published. View page",title);
+
+    }
+    @Test
+    public void testthatAddPageWorkswithBlankTitleandContent(){
+
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoPages();
+        dashboard.gotoAddNewPages();
+
+        AddNewPage addNewPage=new AddNewPage(driver);
+        addNewPage.doAddtitle("");
+        addNewPage.addpagecontent("");
+
+
+        addNewPage.dopublishpage();
+
+        String title = addNewPage.titleofpage();
+        Assert.assertEquals("Page published. View page",title);
+
+    }
+    @Test
+    public void testthatAddPageWorkswithWhiteSpaceonTitle(){
+
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoPages();
+        dashboard.gotoAddNewPages();
+
+        AddNewPage addNewPage=new AddNewPage(driver);
+        addNewPage.doAddtitle("   ");
+        addNewPage.addpagecontent("this is where my content goes");
+
+
+        addNewPage.dopublishpage();
+
+        String title = addNewPage.titleofpage();
+        Assert.assertEquals("Page published. View page",title);
+
+    }
+
 }

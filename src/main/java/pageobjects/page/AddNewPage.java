@@ -1,9 +1,16 @@
 package pageobjects.page;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.HasInputDevices;
+import org.openqa.selenium.interactions.Mouse;
+import org.openqa.selenium.remote.server.handler.ClickElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.swing.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by thapa on 1/18/2017.
@@ -45,10 +52,20 @@ public class AddNewPage {
     }
 
     public void dopublishpage(){
-        WebDriverWait w = new WebDriverWait(driver,15);
-        w.until(ExpectedConditions.elementToBeSelected(publishpage));
-        publishpage.click();
 
+        WebDriverWait w = new WebDriverWait(driver, 10);
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Actions builder = new Actions(driver);
+        builder.moveToElement(publishpage).build().perform();
+
+        //w.until(ExpectedConditions.(publishpage));
+//        publishpage.click();
     }
 
     public void seepreview() {
@@ -56,6 +73,8 @@ public class AddNewPage {
     }
 
     public String titleofpage(){
+        WebDriverWait waitforpublish = new WebDriverWait(driver,15);
+        waitforpublish.until(ExpectedConditions.visibilityOf(newpage));
         String title = newpage.getText();
         return  title;
     }
