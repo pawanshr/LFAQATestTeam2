@@ -45,10 +45,12 @@ public class Settings {
     }
 
     public void setSitetitle(String sitetitletext){
+        sitetitle.clear();
         sitetitle.sendKeys(sitetitletext);
     }
 
     public void setTagline(String taglinetext){
+        tagline.clear();
         tagline.sendKeys(taglinetext);
     }
 
@@ -63,6 +65,7 @@ public class Settings {
     }
 
     public void setEmailaddress(String emailaddresstext){
+        emailaddress.clear();
         emailaddress.sendKeys(emailaddresstext);
     }
 
