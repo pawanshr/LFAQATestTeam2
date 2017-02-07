@@ -41,6 +41,7 @@ public class AddNewUser {
 
 
     public AddNewUser(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 

@@ -12,7 +12,7 @@ public class SettingsTest extends BaseTestLogin {
     @Test
     public void testThatSettingsWorks(){
         Dashboard dashboard = new Dashboard(driver);
-        dashboard.gotoSettings();
+        dashboard.gotoSettingsGeneral();
 
         Settings settings = new Settings(driver);
         settings.setSitetitle("Career Academy");
