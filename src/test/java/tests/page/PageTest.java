@@ -21,8 +21,7 @@ public class PageTest extends BaseTestLogin {
     public void testThatAddPageWorks (){
 
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoPages();
-        dashboard.gotoAddNewPages();
+        dashboard.gotoAddNewPage();
 
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("this is the title page");
@@ -38,7 +37,6 @@ public class PageTest extends BaseTestLogin {
     @Test
     public void testthatDeletePageWorks(){
         Dashboard dashboard = new Dashboard(driver);
-        dashboard.gotoPages();
 
         DeletePage deletePage=new DeletePage(driver);
         deletePage.clickoncheckbox();

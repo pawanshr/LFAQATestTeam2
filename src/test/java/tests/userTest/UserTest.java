@@ -1,5 +1,6 @@
 package tests.userTest;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
@@ -15,7 +16,6 @@ public class UserTest extends BaseTestLogin{
         @Test
         public void testThatAddNewUserWorks(){
             Dashboard dashboard=new Dashboard(driver);
-            dashboard.gotoUsers();
             dashboard.gotoAddNewUser();
 
             AddNewUser addNewUser=new AddNewUser(driver);
@@ -34,11 +34,21 @@ public class UserTest extends BaseTestLogin{
             Assert.assertEquals("Add New User",heading1);
         }
     @Test
+    public void testThatYourProfileWorks(){
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotYourProfile();
+    }
+    @Test
+    public void testThatAllUserWorks(){
+        Dashboard dashboard=new Dashboard(driver);
+        dashboard.gotoAllUsers();
+    }
+    @Test
     public void testThatVerifyWhetherTheUserPageIsClickedOrNot(){
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoUsers();
         String heading=dashboard.getSomeText();
         Assert.assertEquals("Users Add New",heading);
     }
+    
 }
 

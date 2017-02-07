@@ -40,6 +40,7 @@ public class Settings {
     WebElement savechanges;
 
     public Settings(WebDriver driver){
+        this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 

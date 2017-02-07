@@ -36,10 +36,8 @@ public class AddNewPage {
     WebElement newpage;
 
     public AddNewPage(WebDriver driver){
-
         this.driver = driver;
         PageFactory.initElements(driver,this);
-
     }
 
     public void doAddtitle(String addtitletext) {
