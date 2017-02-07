@@ -17,15 +17,15 @@ public class SettingsTest extends BaseTestLogin {
         Settings settings = new Settings(driver);
         settings.setSitetitle("Career Academy");
         settings.setTagline("this is my project");
-        settings.setWpaddressurl("");
-        settings.setSiteaddressurl("");
+        settings.setWpaddressurl("http://localhost/wordpress");
+        settings.setSiteaddressurl("http://localhost/wordpress");
         settings.setEmailaddress("bikthapa41@gmail.com");
         settings.setMembership();
         settings.setRole("Administrator");
         settings.setTimezone("UTC+5:45");
         settings.setDateformat();
         settings.setTimeformat();
-        settings.setWeek("Sonntag");
+        settings.setWeek("Sunday");
         settings.setSitelanguage("English (United States)");
         settings.setSavechanges();
     }

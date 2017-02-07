@@ -52,10 +52,12 @@ public class Settings {
     }
 
     public void setWpaddressurl(String wpaddressurltext){
+        wpaddressurl.clear();
         wpaddressurl.sendKeys(wpaddressurltext);
     }
 
     public void setSiteaddressurl(String siteaddressurltext){
+        siteaddressurl.clear();
         siteaddressurl.sendKeys(siteaddressurltext);
     }
 
