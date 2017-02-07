@@ -100,6 +100,9 @@ public class Dashboard {
        String heading=  dashboardHeadingText.getText();
        return heading;
     }
+    public void allpages(){
+        new Actions(driver).moveToElement(pagesLink).click().build().perform();
+    }
 
 }
 
