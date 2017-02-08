@@ -53,6 +53,6 @@ public class UserTest extends BaseTestLogin{
         String heading=dashboard.getSomeText();
         Assert.assertEquals("Users Add New",heading);
     }
-    
+
 }
 
