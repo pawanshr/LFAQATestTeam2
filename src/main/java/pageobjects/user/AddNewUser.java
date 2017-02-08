@@ -24,7 +24,6 @@ public class AddNewUser {
     WebElement url;
     @FindBy(xpath = ".//*[@id='createuser']/table/tbody/tr[6]/td/button")
     WebElement passclick;
-
     @FindBy(id = "pass1-text")
     WebElement pass1text;
     @FindBy(id = "send_user_notification")
@@ -38,55 +37,42 @@ public class AddNewUser {
     @FindBy(xpath = ".//*[@id='add-new-user']")
     WebElement addnewuserheadingtext;
 
-
-
     public AddNewUser(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
-
     public void setUsername(String usernametext) {
         username.sendKeys(usernametext);
     }
-
     public void setEmail(String emailtext) {
         email.sendKeys(emailtext);
     }
-
     public void setFirstname(String firstnametext) {
         firstname.sendKeys(firstnametext);
     }
-
     public void setlastname(String lastnametext) {
         lastname.sendKeys(lastnametext);
     }
-
     public void setwebsite(String websitetext) {
         url.sendKeys(websitetext);
     }
-
     public void setPassclick() {
         passclick.click();
     }
-
     public void setPassword(String passwordtext) {
-
         pass1text.clear();
         pass1text.sendKeys(passwordtext);
         pass1text.clear();
         pass1text.sendKeys(passwordtext);
 
     }
-
     public void setSendusernotification() {
         send_user_notification.click();
     }
-
     public void setRole(String roletext) {
         Select dropdown = new Select(role);
         dropdown.selectByVisibleText(roletext);
     }
-
     public void setSubmitbutton() {
         createusersub.click();
     }
@@ -98,9 +84,6 @@ public class AddNewUser {
         String heading1=addnewuserheadingtext.getText();
         return heading1;
     }
-
-
-
 }
 
 
