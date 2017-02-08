@@ -38,6 +38,8 @@ public class Settings {
     WebElement sitelanguage;
     @FindBy(id="submit")
     WebElement savechanges;
+    @FindBy(xpath=".//*[@id='wpbody-content']/div[3]/h1")
+    WebElement userheadingtext;
 
     public Settings(WebDriver driver){
         this.driver = driver;
@@ -103,5 +105,11 @@ public class Settings {
 
     public void setSavechanges(){
         savechanges.click();
+    }
+
+    public String getSomeText(){
+       String heading =userheadingtext.getText();
+       return heading;
+
     }
 }

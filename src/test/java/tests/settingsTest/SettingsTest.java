@@ -1,5 +1,6 @@
 package tests.settingsTest;
 
+import org.junit.Assert;
 import org.junit.Test;
 import pageobjects.dashboard.Dashboard;
 import pageobjects.settings.Settings;
@@ -28,6 +29,9 @@ public class SettingsTest extends BaseTestLogin {
         settings.setWeek("Sunday");
         settings.setSitelanguage("English (United States)");
         settings.setSavechanges();
+
+        String heading = dashboard.getSomeText();
+        Assert.assertEquals("General Settings",heading);
     }
 }
 
