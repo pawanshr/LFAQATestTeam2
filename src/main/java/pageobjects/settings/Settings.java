@@ -40,26 +40,32 @@ public class Settings {
     WebElement savechanges;
 
     public Settings(WebDriver driver){
+        this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 
     public void setSitetitle(String sitetitletext){
+        sitetitle.clear();
         sitetitle.sendKeys(sitetitletext);
     }
 
     public void setTagline(String taglinetext){
+        tagline.clear();
         tagline.sendKeys(taglinetext);
     }
 
     public void setWpaddressurl(String wpaddressurltext){
+        wpaddressurl.clear();
         wpaddressurl.sendKeys(wpaddressurltext);
     }
 
     public void setSiteaddressurl(String siteaddressurltext){
+        siteaddressurl.clear();
         siteaddressurl.sendKeys(siteaddressurltext);
     }
 
     public void setEmailaddress(String emailaddresstext){
+        emailaddress.clear();
         emailaddress.sendKeys(emailaddresstext);
     }
 

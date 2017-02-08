@@ -1,9 +1,16 @@
 package pageobjects.page;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.HasInputDevices;
+import org.openqa.selenium.interactions.Mouse;
+import org.openqa.selenium.remote.server.handler.ClickElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.swing.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by thapa on 1/18/2017.
@@ -28,11 +35,12 @@ public class AddNewPage {
     @FindBy(xpath = ".//div[\"message\"]/p[contains(text(),\"published\")]")
     WebElement newpage;
 
-    public AddNewPage(WebDriver driver){
+    @FindBy(id = "submitdiv")
+    WebElement publishsection;
 
+    public AddNewPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
-
     }
 
     public void doAddtitle(String addtitletext) {
@@ -45,10 +53,10 @@ public class AddNewPage {
     }
 
     public void dopublishpage(){
-        WebDriverWait w = new WebDriverWait(driver,15);
-        w.until(ExpectedConditions.elementToBeSelected(publishpage));
-        publishpage.click();
 
+        new Actions(driver).moveToElement(publishsection).click().build().perform();
+        new WebDriverWait(driver, 100).until(ExpectedConditions.elementToBeClickable(publishpage));
+        publishpage.sendKeys(Keys.ENTER);
     }
 
     public void seepreview() {
@@ -56,6 +64,8 @@ public class AddNewPage {
     }
 
     public String titleofpage(){
+        WebDriverWait waitforpublish = new WebDriverWait(driver,15);
+        waitforpublish.until(ExpectedConditions.visibilityOf(newpage));
         String title = newpage.getText();
         return  title;
     }

@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.post.AddNewPost;
 import pageobjects.dashboard.Dashboard;
-import tests.BaseTest;
 import tests.BaseTestLogin;
 
 /**
@@ -16,7 +15,6 @@ public class NewPostTest extends BaseTestLogin {
     public void testThatAddNewPostWorks(){
         Dashboard dashboard=new Dashboard(driver);
         PageFactory.initElements(driver,dashboard);
-        dashboard.gotoPosts();
         dashboard.gotoAddNewPost();
 
         AddNewPost addNewPost=new AddNewPost(driver);
@@ -27,7 +25,6 @@ public class NewPostTest extends BaseTestLogin {
     @Test
     public void testThatVerifyWhetherThePostPageIsClickedOrNot(){
         Dashboard dashboard1=new Dashboard(driver);
-        dashboard1.gotoPosts();
         dashboard1.gotoAddNewPost();
 
         AddNewPost addNewPost= new AddNewPost(driver);
