@@ -35,6 +35,9 @@ public class AddNewPage {
     @FindBy(xpath = ".//div[\"message\"]/p[contains(text(),\"published\")]")
     WebElement newpage;
 
+    @FindBy(id = "submitdiv")
+    WebElement publishsection;
+
     public AddNewPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -51,19 +54,9 @@ public class AddNewPage {
 
     public void dopublishpage(){
 
-        WebDriverWait w = new WebDriverWait(driver, 10);
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        Actions builder = new Actions(driver);
-        builder.moveToElement(publishpage).build().perform();
-
-        //w.until(ExpectedConditions.(publishpage));
-//        publishpage.click();
+        new Actions(driver).moveToElement(publishsection).click().build().perform();
+        new WebDriverWait(driver, 100).until(ExpectedConditions.elementToBeClickable(publishpage));
+        publishpage.sendKeys(Keys.ENTER);
     }
 
     public void seepreview() {

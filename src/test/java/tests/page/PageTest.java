@@ -26,8 +26,6 @@ public class PageTest extends BaseTestLogin {
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("this is the title page");
         addNewPage.addpagecontent("this is where my content goes");
-
-
         addNewPage.dopublishpage();
 
         String title = addNewPage.titleofpage();
@@ -37,6 +35,7 @@ public class PageTest extends BaseTestLogin {
     @Test
     public void testthatDeletePageWorks(){
         Dashboard dashboard = new Dashboard(driver);
+        dashboard.allpages();
 
         DeletePage deletePage=new DeletePage(driver);
         deletePage.clickoncheckbox();
@@ -49,8 +48,7 @@ public class PageTest extends BaseTestLogin {
     @Test
     public void testthatAddPageWorkswithBlankTitle(){
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoPages();
-        dashboard.gotoAddNewPages();
+        dashboard.gotoAddNewPage();
 
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("");
@@ -66,8 +64,7 @@ public class PageTest extends BaseTestLogin {
     public void testthatAddPageWorkswithBlankContent(){
 
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoPages();
-        dashboard.gotoAddNewPages();
+        dashboard.gotoAddNewPage();
 
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("this is the title page");
@@ -85,8 +82,7 @@ public class PageTest extends BaseTestLogin {
     public void testthatAddPageWorkswithBlankTitleandContent(){
 
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoPages();
-        dashboard.gotoAddNewPages();
+        dashboard.gotoAddNewPage();
 
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("");
@@ -103,8 +99,7 @@ public class PageTest extends BaseTestLogin {
     public void testthatAddPageWorkswithWhiteSpaceonTitle(){
 
         Dashboard dashboard=new Dashboard(driver);
-        dashboard.gotoPages();
-        dashboard.gotoAddNewPages();
+        dashboard.gotoAddNewPage();
 
         AddNewPage addNewPage=new AddNewPage(driver);
         addNewPage.doAddtitle("   ");
